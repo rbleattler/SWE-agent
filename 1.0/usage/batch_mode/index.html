@@ -2265,19 +2265,20 @@ Let's run on three <a href="https://www.swebench.com/">SWE-bench</a> issues whic
 <span class="w">    </span>--config<span class="w"> </span>config/default.yaml<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--agent.model.name<span class="w"> </span>gpt-4o<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--agent.model.per_instance_cost_limit<span class="w"> </span><span class="m">2</span>.00<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--instances.type<span class="w"> </span>swe_bench<span class="w"> </span><span class="se">\ </span><span class="w"> </span><span class="c1"># (1)!</span>
-<span class="w">    </span>--instances.subset<span class="w"> </span>lite<span class="w"> </span><span class="se">\ </span><span class="w"> </span><span class="c1"># (2)!</span>
-<span class="w">    </span>--instances.split<span class="w"> </span>dev<span class="w">  </span><span class="se">\ </span><span class="w"> </span><span class="c1"># (3)!</span>
-<span class="w">    </span>--instances.slice<span class="w"> </span>:3<span class="w"> </span><span class="se">\ </span><span class="w"> </span><span class="c1"># (4)!</span>
-<span class="w">    </span>--instances.shuffle<span class="o">=</span>True<span class="w">  </span><span class="c1"># (5)!</span>
+<span class="w">    </span>--instances.type<span class="w"> </span>swe_bench<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--instances.subset<span class="w"> </span>lite<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--instances.split<span class="w"> </span>dev<span class="w">  </span><span class="se">\</span>
+<span class="w">    </span>--instances.slice<span class="w"> </span>:3<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--instances.shuffle<span class="o">=</span>True
 </code></pre></div>
+<p>Let's look at the options:</p>
 <ol>
-<li>There's a couple of built-in ways to configure instances. This option selects the SWE-bench dataset.</li>
-<li>There's a few datasets provided by the SWE-bench project. Lite is a subset of GitHub issues with a few heuristic filters that makes them more likely to be solvable.</li>
-<li>Most datasets have a <code>dev</code> and a <code>test</code> split.</li>
-<li>The <code>--slice</code> option allows you to select a subset of instances from the dataset. It works just the way to pythons <code>list[...]</code> slicing, so you can specify <code>:10</code> to take the first 10 instances, <code>10:20</code> to take the next 10, <code>-10:</code> to take the last 10, or <code>10:20:2</code> to take every second instance in that range.</li>
+<li><code>--instances.type swe_bench</code>: There's a couple of built-in ways to configure instances. This option selects the SWE-bench dataset.</li>
+<li><code>--instances.subset lite</code>: There's a few datasets provided by the SWE-bench project. Lite is a subset of GitHub issues with a few heuristic filters that makes them more likely to be solvable.</li>
+<li><code>--instances.split dev</code>: Most datasets have a <code>dev</code> and a <code>test</code> split.</li>
+<li><code>--instances.slice :3</code>: The <code>--slice</code> option allows you to select a subset of instances from the dataset. It works just the way to pythons <code>list[...]</code> slicing, so you can specify <code>:10</code> to take the first 10 instances, <code>10:20</code> to take the next 10, <code>-10:</code> to take the last 10, or <code>10:20:2</code> to take every second instance in that range.</li>
 <li>
-<p>Shuffle all instances before slicing.</p>
+<p><code>--instances.shuffle=True</code>: Shuffle all instances before slicing. This is a deterministic operation, so the same command will always return the same instances in the same order.</p>
 </li>
 <li>
 <p>There's some things that you should recognize: All of the <code>--agent</code> options are available and you can still specify <code>--config</code> files.</p>
@@ -2330,13 +2331,11 @@ This will already submit submissions to <code>sb-cli</code> while you are runnin
 <span class="w">    </span>--config<span class="w"> </span>config/default.yaml<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--agent.model.name<span class="w"> </span>gpt-4o<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--instances.type<span class="w"> </span>file<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--instances.path<span class="w"> </span>instances.yaml<span class="w">  </span><span class="c1"># (1)!</span>
+<span class="w">    </span>--instances.path<span class="w"> </span>instances.yaml<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--instances.slice<span class="w"> </span>:3<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--instances.shuffle<span class="o">=</span>True
 </code></pre></div>
-<ol>
-<li>We support <code>.jsonl</code>, <code>.json</code>, and <code>.yaml</code> files.</li>
-</ol>
+<p><code>--instances.path</code> supports <code>.jsonl</code>, <code>.json</code>, and <code>.yaml</code> files.</p>
 <p>Here'the simplest example of what such a file can look like</p>
 <div class="highlight"><span class="filename">instances.yaml</span><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">image_name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;python:3.11&quot;</span><span class="w">  </span><span class="c1"># (1)!</span>
 <span class="w">  </span><span class="nt">problem_statement</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;A</span><span class="nv"> </span><span class="s">simple</span><span class="nv"> </span><span class="s">test</span><span class="nv"> </span><span class="s">problem&quot;</span>
