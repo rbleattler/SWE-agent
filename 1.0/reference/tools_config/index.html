@@ -2718,6 +2718,11 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
 
 <h1 id="tool-configuration">Tool configuration</h1>
 <p>This shows how to configure tools for SWE-agent.</p>
+<div class="admonition note">
+<p class="admonition-title">Tool configuration</p>
+<p>This is the page for configuring tools for SWE-agent, not for setting up the tools that are being used for the agent.
+For the latter, see <a href="../bundle_config/">tool bundles</a>.</p>
+</div>
 
 
 <div class="doc doc-object doc-class">
@@ -2744,71 +2749,71 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
         <p>Fields:</p>
         <ul>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.filter" href="../bundle_config/#sweagent.tools.tools.ToolConfig.filter">filter</a></code>
-                (<code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolFilterConfig" href="../bundle_config/#sweagent.tools.tools.ToolFilterConfig">ToolFilterConfig</a></code>)
+              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.filter" href="#sweagent.tools.tools.ToolConfig.filter">filter</a></code>
+                (<code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolFilterConfig" href="#sweagent.tools.tools.ToolFilterConfig">ToolFilterConfig</a></code>)
             </li>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.bundles" href="../bundle_config/#sweagent.tools.tools.ToolConfig.bundles">bundles</a></code>
+              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.bundles" href="#sweagent.tools.tools.ToolConfig.bundles">bundles</a></code>
                 (<code>list[<a class="autorefs autorefs-internal" title="sweagent.tools.bundle.Bundle" href="#sweagent.tools.bundle.Bundle">Bundle</a>]</code>)
             </li>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.env_variables" href="../bundle_config/#sweagent.tools.tools.ToolConfig.env_variables">env_variables</a></code>
+              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.env_variables" href="#sweagent.tools.tools.ToolConfig.env_variables">env_variables</a></code>
                 (<code>dict[str, <span title="typing.Any">Any</span>]</code>)
             </li>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.submit_command" href="../bundle_config/#sweagent.tools.tools.ToolConfig.submit_command">submit_command</a></code>
+              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.submit_command" href="#sweagent.tools.tools.ToolConfig.submit_command">submit_command</a></code>
                 (<code>str</code>)
             </li>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.parse_function" href="../bundle_config/#sweagent.tools.tools.ToolConfig.parse_function">parse_function</a></code>
+              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.parse_function" href="#sweagent.tools.tools.ToolConfig.parse_function">parse_function</a></code>
                 (<code><a class="autorefs autorefs-internal" title="sweagent.tools.parsing.ParseFunction" href="../parsers/#sweagent.tools.parsing.ParseFunction">ParseFunction</a></code>)
             </li>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.enable_bash_tool" href="../bundle_config/#sweagent.tools.tools.ToolConfig.enable_bash_tool">enable_bash_tool</a></code>
+              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.enable_bash_tool" href="#sweagent.tools.tools.ToolConfig.enable_bash_tool">enable_bash_tool</a></code>
                 (<code>bool</code>)
             </li>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.format_error_template" href="../bundle_config/#sweagent.tools.tools.ToolConfig.format_error_template">format_error_template</a></code>
+              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.format_error_template" href="#sweagent.tools.tools.ToolConfig.format_error_template">format_error_template</a></code>
                 (<code>str</code>)
             </li>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.command_docs" href="../bundle_config/#sweagent.tools.tools.ToolConfig.command_docs">command_docs</a></code>
+              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.command_docs" href="#sweagent.tools.tools.ToolConfig.command_docs">command_docs</a></code>
                 (<code>str</code>)
             </li>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.multi_line_command_endings" href="../bundle_config/#sweagent.tools.tools.ToolConfig.multi_line_command_endings">multi_line_command_endings</a></code>
+              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.multi_line_command_endings" href="#sweagent.tools.tools.ToolConfig.multi_line_command_endings">multi_line_command_endings</a></code>
                 (<code>dict[str, str]</code>)
             </li>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.submit_command_end_name" href="../bundle_config/#sweagent.tools.tools.ToolConfig.submit_command_end_name">submit_command_end_name</a></code>
+              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.submit_command_end_name" href="#sweagent.tools.tools.ToolConfig.submit_command_end_name">submit_command_end_name</a></code>
                 (<code>str | None</code>)
             </li>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.reset_commands" href="../bundle_config/#sweagent.tools.tools.ToolConfig.reset_commands">reset_commands</a></code>
+              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.reset_commands" href="#sweagent.tools.tools.ToolConfig.reset_commands">reset_commands</a></code>
                 (<code>list[str | list[str]]</code>)
             </li>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.execution_timeout" href="../bundle_config/#sweagent.tools.tools.ToolConfig.execution_timeout">execution_timeout</a></code>
+              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.execution_timeout" href="#sweagent.tools.tools.ToolConfig.execution_timeout">execution_timeout</a></code>
                 (<code>int</code>)
             </li>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.install_timeout" href="../bundle_config/#sweagent.tools.tools.ToolConfig.install_timeout">install_timeout</a></code>
+              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.install_timeout" href="#sweagent.tools.tools.ToolConfig.install_timeout">install_timeout</a></code>
                 (<code>int</code>)
             </li>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.use_function_calling" href="../bundle_config/#sweagent.tools.tools.ToolConfig.use_function_calling">use_function_calling</a></code>
+              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.use_function_calling" href="#sweagent.tools.tools.ToolConfig.use_function_calling">use_function_calling</a></code>
                 (<code>bool</code>)
             </li>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.state_commands" href="../bundle_config/#sweagent.tools.tools.ToolConfig.state_commands">state_commands</a></code>
+              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.state_commands" href="#sweagent.tools.tools.ToolConfig.state_commands">state_commands</a></code>
                 (<code>list[str]</code>)
             </li>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.commands" href="../bundle_config/#sweagent.tools.tools.ToolConfig.commands">commands</a></code>
+              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.commands" href="#sweagent.tools.tools.ToolConfig.commands">commands</a></code>
                 (<code>list[<a class="autorefs autorefs-internal" title="sweagent.tools.commands.Command" href="../bundle_config/#sweagent.tools.commands.Command">Command</a>]</code>)
             </li>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.tools" href="../bundle_config/#sweagent.tools.tools.ToolConfig.tools">tools</a></code>
+              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.tools" href="#sweagent.tools.tools.ToolConfig.tools">tools</a></code>
                 (<code>list[dict]</code>)
             </li>
         </ul>
@@ -2970,7 +2975,7 @@ equivalent to adding <code>export VARNAME=value</code> to the <code>reset_comman
   </span>
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="nb">filter</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolFilterConfig" href="../bundle_config/#sweagent.tools.tools.ToolFilterConfig">ToolFilterConfig</a></span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nb">filter</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolFilterConfig" href="#sweagent.tools.tools.ToolFilterConfig">ToolFilterConfig</a></span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -3232,19 +3237,19 @@ These commands are executed in a subprocess and are not part of the environment 
         <p>Fields:</p>
         <ul>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolFilterConfig.blocklist_error_template" href="../bundle_config/#sweagent.tools.tools.ToolFilterConfig.blocklist_error_template">blocklist_error_template</a></code>
+              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolFilterConfig.blocklist_error_template" href="#sweagent.tools.tools.ToolFilterConfig.blocklist_error_template">blocklist_error_template</a></code>
                 (<code>str</code>)
             </li>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolFilterConfig.blocklist" href="../bundle_config/#sweagent.tools.tools.ToolFilterConfig.blocklist">blocklist</a></code>
+              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolFilterConfig.blocklist" href="#sweagent.tools.tools.ToolFilterConfig.blocklist">blocklist</a></code>
                 (<code>list[str]</code>)
             </li>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolFilterConfig.blocklist_standalone" href="../bundle_config/#sweagent.tools.tools.ToolFilterConfig.blocklist_standalone">blocklist_standalone</a></code>
+              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolFilterConfig.blocklist_standalone" href="#sweagent.tools.tools.ToolFilterConfig.blocklist_standalone">blocklist_standalone</a></code>
                 (<code>list[str]</code>)
             </li>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolFilterConfig.block_unless_regex" href="../bundle_config/#sweagent.tools.tools.ToolFilterConfig.block_unless_regex">block_unless_regex</a></code>
+              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolFilterConfig.block_unless_regex" href="#sweagent.tools.tools.ToolFilterConfig.block_unless_regex">block_unless_regex</a></code>
                 (<code>dict[str, str]</code>)
             </li>
         </ul>
@@ -3393,7 +3398,7 @@ These commands are executed in a subprocess and are not part of the environment 
             </li>
             <li>
               <code><span title="sweagent.tools.bundle.Bundle._config">_config</span></code>
-                (<code><span title="sweagent.tools.bundle.BundleConfig">BundleConfig</span></code>)
+                (<code><a class="autorefs autorefs-internal" title="sweagent.tools.bundle.BundleConfig" href="../bundle_config/#sweagent.tools.bundle.BundleConfig">BundleConfig</a></code>)
             </li>
             <li>
               <code><a class="autorefs autorefs-internal" title="sweagent.tools.bundle.Bundle.state_command" href="#sweagent.tools.bundle.Bundle.state_command">state_command</a></code>
@@ -3401,7 +3406,7 @@ These commands are executed in a subprocess and are not part of the environment 
             </li>
             <li>
               <code><a class="autorefs autorefs-internal" title="sweagent.tools.bundle.Bundle.config" href="#sweagent.tools.bundle.Bundle.config">config</a></code>
-                (<code><span title="sweagent.tools.bundle.BundleConfig">BundleConfig</span></code>)
+                (<code><a class="autorefs autorefs-internal" title="sweagent.tools.bundle.BundleConfig" href="../bundle_config/#sweagent.tools.bundle.BundleConfig">BundleConfig</a></code>)
             </li>
             <li>
               <code><a class="autorefs autorefs-internal" title="sweagent.tools.bundle.Bundle.commands" href="#sweagent.tools.bundle.Bundle.commands">commands</a></code>
@@ -3460,7 +3465,7 @@ These commands are executed in a subprocess and are not part of the environment 
   </span>
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">config</span><span class="p">:</span> <span class="n"><span title="sweagent.tools.bundle.BundleConfig">BundleConfig</span></span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">config</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="sweagent.tools.bundle.BundleConfig" href="../bundle_config/#sweagent.tools.bundle.BundleConfig">BundleConfig</a></span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
