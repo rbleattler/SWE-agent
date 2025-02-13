@@ -1941,9 +1941,27 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
 </li>
         
           <li class="md-nav__item">
+  <a href="#sweagent.agent.history_processors.LastNObservations.polling" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;polling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#sweagent.agent.history_processors.LastNObservations.type" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;type
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweagent.agent.history_processors.LastNObservations.validate_n" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;validate_n
     </span>
   </a>
   
@@ -2295,9 +2313,27 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
 </li>
         
           <li class="md-nav__item">
+  <a href="#sweagent.agent.history_processors.LastNObservations.polling" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;polling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#sweagent.agent.history_processors.LastNObservations.type" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;type
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweagent.agent.history_processors.LastNObservations.validate_n" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;validate_n
     </span>
   </a>
   
@@ -2473,7 +2509,7 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
             <p class="doc doc-class-bases">
               Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
 
-        <p>Keep the last n observations.</p>
+        <p>Keep the last n observations or remove tagged observations.</p>
 
     
       <p>Config:</p>
@@ -2485,6 +2521,10 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
         <ul>
             <li>
               <code><a class="autorefs autorefs-internal" title="sweagent.agent.history_processors.LastNObservations.n" href="#sweagent.agent.history_processors.LastNObservations.n">n</a></code>
+                (<code>int</code>)
+            </li>
+            <li>
+              <code><a class="autorefs autorefs-internal" title="sweagent.agent.history_processors.LastNObservations.polling" href="#sweagent.agent.history_processors.LastNObservations.polling">polling</a></code>
                 (<code>int</code>)
             </li>
             <li>
@@ -2501,6 +2541,13 @@ SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-ag
             </li>
         </ul>
 
+        <p>Validators:</p>
+        <ul>
+            <li>
+              <code><a class="autorefs autorefs-internal" title="sweagent.agent.history_processors.LastNObservations.validate_n" href="#sweagent.agent.history_processors.LastNObservations.validate_n">validate_n</a></code>
+                &rarr;
+                  <code><a class="autorefs autorefs-internal" title="sweagent.agent.history_processors.LastNObservations.n" href="#sweagent.agent.history_processors.LastNObservations.n">n</a></code>            </li>
+        </ul>
 
 
 
@@ -2587,6 +2634,32 @@ even if it is one of the last n observations.</p>
 
 
 
+<h3 id="sweagent.agent.history_processors.LastNObservations.polling" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">polling</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-pydantic-field"><code>pydantic-field</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">polling</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>How many steps to keep between updating the number of observations to keep.
+This is useful for caching, as we want to remove more and more messages, but every
+time we change the history, we need to cache everything again.
+Effectively, we will now keep between <code>n</code> and <code>n+polling</code> observations.</p>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
 <h3 id="sweagent.agent.history_processors.LastNObservations.type" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">type</span>
 
@@ -2607,6 +2680,42 @@ even if it is one of the last n observations.</p>
 </div>
 
 
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="sweagent.agent.history_processors.LastNObservations.validate_n" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">validate_n</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-pydantic-validator"><code>pydantic-validator</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">validate_n</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="n">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">int</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+            <details class="quote">
+              <summary>Source code in <code>sweagent/agent/history_processors.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@field_validator</span><span class="p">(</span><span class="s2">&quot;n&quot;</span><span class="p">)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">validate_n</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;n must be a positive integer&quot;</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">n</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
 
 
 
