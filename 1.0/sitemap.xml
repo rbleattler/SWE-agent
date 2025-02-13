@@ -45,6 +45,10 @@
          <lastmod>2025-02-13</lastmod>
     </url>
     <url>
+         <loc>https://swe-agent.com/latest/config/models/</loc>
+         <lastmod>2025-02-13</lastmod>
+    </url>
+    <url>
          <loc>https://swe-agent.com/latest/config/templates/</loc>
          <lastmod>2025-02-13</lastmod>
     </url>
@@ -126,6 +130,10 @@
     </url>
     <url>
          <loc>https://swe-agent.com/latest/reference/model_config/</loc>
+         <lastmod>2025-02-13</lastmod>
+    </url>
+    <url>
+         <loc>https://swe-agent.com/latest/reference/parsers/</loc>
          <lastmod>2025-02-13</lastmod>
     </url>
     <url>

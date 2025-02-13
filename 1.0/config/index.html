@@ -1087,6 +1087,8 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       
         
       
+        
+      
     
     
       
@@ -1163,6 +1165,28 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
   
   <span class="md-ellipsis">
     Templates
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="models/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Models
     
   </span>
   
@@ -1655,6 +1679,8 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       
         
       
+        
+      
     
     
       
@@ -1787,6 +1813,28 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
   
   <span class="md-ellipsis">
     History processors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/parsers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Action parsers
     
   </span>
   
@@ -2044,9 +2092,11 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
 <p>This page contains details describing how to write your own configurations to control how agents can interact with the <code>SWEEnv</code> environment.</p>
 <p>A configuration is represented in one or more <code>.yaml</code> files, specified by the <code>--config</code> flag in the <a href="../usage/cl_tutorial/">command line interface</a>, allowing you to...</p>
 <ul>
-<li>Define the <strong>commands</strong> that agents may use to traverse + modify a codebase (see <a href="tools/">here</a> for more details)</li>
-<li>Write <strong>prompts</strong> that are deterministically/conditionally shown to the agent over the course of a single trajectory.</li>
-<li>Control the <strong>input/output interface</strong> that sits between the agent and <code>SWEEnv</code>.</li>
+<li>Define the <a href="tools/"><strong>tools</strong></a> that agents may use to traverse + modify a codebase.</li>
+<li>Write <a href="templates/"><strong>prompts</strong></a> that are deterministically/conditionally shown to the agent over the course of a single trajectory.</li>
+<li>Use <a href="demonstrations/"><strong>demonstrations</strong></a> to guide the agent's behavior.</li>
+<li>Change the <a href="models/"><strong>model behavior</strong></a> of the agent.</li>
+<li>Control the <strong>input/output interface</strong> that sits between the agent and the environment</li>
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Default config files</p>
