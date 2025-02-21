@@ -1,0 +1,3 @@
+#! /bin/bash
+
+sweer get_text $1

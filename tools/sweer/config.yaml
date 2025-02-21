@@ -1,0 +1,109 @@
+tools:
+  open_site:
+    signature: "open_site <url>"
+    docstring: "opens the specified website URL in the browser"
+    arguments:
+      - name: url
+        type: string
+        description: "the URL to open (if protocol is omitted, https:// will be added)"
+        required: true
+
+  close_site:
+    signature: "close_site"
+    docstring: "closes the currently open browser window"
+    arguments: []
+
+  screenshot:
+    signature: "screenshot <output_path> <with_overlay>"
+    docstring: "captures a screenshot of the current page"
+    arguments: []
+
+  click_element:
+    signature: "click_element <selector>"
+    docstring: "clicks on an element specified by CSS selector or overlay number"
+    arguments:
+      - name: selector
+        type: string
+        description: "CSS selector or overlay number of the element to click"
+        required: true
+
+  type_element:
+    signature: "type_element <selector> <text>"
+    docstring: "types text into an input field specified by selector"
+    arguments:
+      - name: selector
+        type: string
+        description: "CSS selector of the input element"
+        required: true
+      - name: text
+        type: string
+        description: "text to type into the element"
+        required: true
+
+  scroll_site:
+    signature: "scroll_site <direction> <amount>"
+    docstring: "scrolls the page in the specified direction by given amount"
+    arguments:
+      - name: direction
+        type: string
+        description: "direction to scroll (up/down/left/right)"
+        required: true
+      - name: amount
+        type: integer
+        description: "number of pixels to scroll"
+        required: true
+
+  get_element_text:
+    signature: "get_element_text <selector>"
+    docstring: "retrieves the text content from an element"
+    arguments:
+      - name: selector
+        type: string
+        description: "CSS selector of the element"
+        required: true
+
+  get_element_attribute:
+    signature: "get_element_attribute <selector> <attribute>"
+    docstring: "gets the value of a specific attribute from an element"
+    arguments:
+      - name: selector
+        type: string
+        description: "CSS selector of the element"
+        required: true
+      - name: attribute
+        type: string
+        description: "name of the attribute to retrieve"
+        required: true
+
+  execute_on_site:
+    signature: "execute_on_site <script>"
+    docstring: "executes custom JavaScript code on the current page"
+    arguments:
+      - name: script
+        type: string
+        description: "JavaScript code to execute"
+        required: true
+
+  back:
+    signature: "back"
+    docstring: "navigates back in browser history"
+    arguments: []
+
+  forward:
+    signature: "forward"
+    docstring: "navigates forward in browser history"
+    arguments: []
+
+  reload:
+    signature: "reload"
+    docstring: "reloads the current page"
+    arguments: []
+
+  list_elements:
+    signature: "list_elements <selector>"
+    docstring: "lists all elements matching the given CSS selector"
+    arguments:
+      - name: selector
+        type: string
+        description: "CSS selector to match elements"
+        required: true

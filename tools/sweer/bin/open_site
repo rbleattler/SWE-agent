@@ -1,0 +1,3 @@
+#! /bin/bash
+
+sweer open $1
